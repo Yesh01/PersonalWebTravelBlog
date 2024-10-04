@@ -55,3 +55,13 @@ Currently, the **backbone** of the site is under development, with major section
 ---
 
 Happy Coding!
+
+---
+
+## Wireframe Design 
+
+```
+Created and Upload Oct 4, 2024 [11:53PM]
+```
+![Container   Body   Main   - Wireframe](https://github.com/user-attachments/assets/b2734c7e-7a4a-4a16-a393-d5d09cee44b9)
+

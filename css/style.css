@@ -21,6 +21,10 @@
     --fs-1: 3.4rem;
     --fs-2: 3.2rem;
 
+    /* Transitions */
+
+    --transition--1: 0.15s ease;
+
 
 }
 
@@ -56,8 +60,16 @@ a  { display: block;} /* it will be added some properties soon, like img*/
 .container { padding-inline: 15px; }
 
 .btn {
-    background: var();
+    background: var(--body-bg), var(--white-color);
+    color: var(--color), var(--primary-color);
+    font-weight: 100; /* Tempoary */
+    padding: 10px 25px;
+    border: 2px solid var(--white-color);
+    border-radius: 6px;
+    
 }
+
+
 
 /* Header */
 
@@ -80,8 +92,9 @@ a  { display: block;} /* it will be added some properties soon, like img*/
 .navbar {
     width: 100%;
     padding: 20px 10px;
-    opacity: 0;
-    visibility: hidden; /* --- */
+    opacity: 1; /* --- */
+    visibility: visible; /* --- */
+    transition: var(--transition--1);
 }
 
 .navbar-list { margin-bottom: 15px;}
@@ -93,6 +106,7 @@ a  { display: block;} /* it will be added some properties soon, like img*/
     padding-block: 10px 0;
     border-bottom: 2px solid transparent;
     width: max-content;
+
 }
 
 

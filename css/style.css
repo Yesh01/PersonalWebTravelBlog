@@ -13,12 +13,8 @@
 
     --blue-001: #3f4484;
     --white-color: #ffffff;
-    --body-bg: hsl(0, 0, 98%);
+
     
-    --btn-color: #e7c341;
-    --btn-hover-color: #d4b237;
-
-
     /* Fonts */
 
     --font-primary: 'Heebo', san-serif;
@@ -26,7 +22,7 @@
     /* Sizes */
 
     --fs-logo: 2.4rem;
-    --fs-nav: 1.1rem;
+    --fs-nav: 1.6rem;
     --fs-btn: 1.1rem;
 
     /* Border Radius */
@@ -144,10 +140,18 @@ ion-icon { display: block; }
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
     color: var(--white-color);
     font-size: var(--fs-logo);
     font-weight: 600;
+    margin: 0;
 }
+
 
 .navbar {
     width: 100%;
@@ -160,7 +164,7 @@ ion-icon { display: block; }
 .navbar-list { margin-bottom: 15px; }
 
 .navbar-link {
-    color:var(--white-color);
+    color: var(--white-color);
     font-size: var(--fs-nav);
     font-weight: 500;
     padding-block: 10px 0;
@@ -181,6 +185,8 @@ ion-icon { display: block; }
     --ionicon-stroke-width: 40px;
 }
 
+.navbar-link:is(:hover, :focus) { border-color: var(--white-color); }
+
 
 
 
@@ -188,6 +194,39 @@ ion-icon { display: block; }
 /*-----------------------------------*\
            #RESPONSIVENESS
 \*-----------------------------------*/
+
+@media (max-width: 480px) {
+    
+    .logo svg {
+        width: 45px;
+    }
+
+    .logo-text {
+        font-size: 1.8rem;
+    }
+    
+}
+
+
+@media (min-width: 768px) {
+
+.container {
+    max-width: 750px;
+    margin-inline: auto;
+}
+
+.logo svg {
+    width: 65px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 2rem;
+}
+    
+}
+
+/* --> ***************** <-- */
 
 @media (min-width: 992px) {
 
@@ -227,6 +266,8 @@ ion-icon { display: block; }
 }
     
 }
+
+/* --> ***************** <-- */
 
 @media (min-width: 1200px) {
 

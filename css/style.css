@@ -12,7 +12,7 @@
     /* Colors */
 
     --blue-001: #3f4484;
-    --white-color: #ffff;
+    --white-color: #ffffff;
     --body-bg: hsl(0, 0, 98%);
     
     --btn-color: #e7c341;
@@ -101,9 +101,9 @@ ion-icon { display: block; }
     border-radius: var(--radius-6);
 }
 
-.btn-secondary {
+.btn-secondary:is(:hover, :focus) {
     --background: transparent;
-    --color: var(var(--white-color));
+    --color: var(--white-color);
 }
 
 .btn-primary:is(:hover, :focus){
@@ -128,7 +128,7 @@ ion-icon { display: block; }
 
 .header.active {
     height: 425px;
-    transition: 0.35s;
+    transition-duration: 0.35s;
 }
 
 .header .container {
@@ -139,8 +139,8 @@ ion-icon { display: block; }
 }
 
 .header.active .navbar {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
 }
 
 .logo {
@@ -152,8 +152,8 @@ ion-icon { display: block; }
 .navbar {
     width: 100%;
     padding: 20px 10px;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transition: var(--transition-1);
 }
 
@@ -178,7 +178,7 @@ ion-icon { display: block; }
 .nav-toggle-btn ion-icon {
     color: var(--white-1);
     font-size: 35px;
-    --iconicon-stroke-width: 40px;
+    --ionicon-stroke-width: 40px;
 }
 
 
@@ -225,6 +225,14 @@ ion-icon { display: block; }
     font-weight: 700;
     margin-bottom: 8px;
 }
+    
+}
+
+@media (min-width: 1200px) {
+
+.container { max-width: 1150px; }
+
+.navbar-list { gap: 50px; }
     
 }
 

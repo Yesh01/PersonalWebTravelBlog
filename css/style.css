@@ -35,7 +35,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: var(--fs-1);
 }
 
 body {
@@ -54,6 +53,9 @@ a  { text-decoration: none; }
 a  { display: block;} /* it will be added some properties soon, like img*/
 
 .container { padding-inline: 15px;}
+
+
+
 
 /* Reusability Component */
 
@@ -77,16 +79,25 @@ a  { display: block;} /* it will be added some properties soon, like img*/
     background: var(--primary-color); /* Tempoary */
     padding-block: 20px;
     height: 88px;
-    overflow: hidden; /* --- */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
-.header .container {
+.header
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    visibility: visible; /* --- */
 
+}
+
+.logo {
+    color: var(--white-color);
+    font-size: 3.2rem;
+    font-weight: 600;
 }
 
 .navbar {
@@ -97,12 +108,15 @@ a  { display: block;} /* it will be added some properties soon, like img*/
     transition: var(--transition--1);
 }
 
-.navbar-list { margin-bottom: 15px;}
+.navbar-list {
+    display: flex;
+    gap: 20px;
+}
 
 .navbar-link {
     color:var(--white-color); /* Temporary */
-    font-size: medium; /* Temporary */
-    font-weight: 100;  /* Temporary */
+    font-size: 1.8rem;
+    font-weight: 500;
     padding-block: 10px 0;
     border-bottom: 2px solid transparent;
     width: max-content;

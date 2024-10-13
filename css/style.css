@@ -13,21 +13,28 @@
 
     --blue-001: #3f4484;
     --white-color: #ffffff;
+    --yellow-002: #E4C312;
+    --darkish-003: #564E3A;
+    --grayish-004: #585656;
 
     
     /* Fonts */
 
-    --font-primary: 'Heebo', san-serif;
-
+    --font-primary: 'Heebo', sans-serif;
+    --font-island-moments: 'Island Moments', cursive, sans-serif;;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-lexend: 'Lexend', sans-serif;
+    --font-berkshire-swash: 'Berkshire Swash', cursive, sans-serif;;
+    --font-kalnia: 'Kalnia', sans-serif;
     /* Sizes */
 
     --fs-logo: 2.4rem;
-    --fs-nav: 1.6rem;
+    --fs-nav: 1.8rem;
     --fs-btn: 1.1rem;
 
     /* Border Radius */
 
-    --radius-6: 6px;
+    --radius-6: 8px;
 
     /* Spacing */
 
@@ -88,17 +95,19 @@ ion-icon { display: block; }
 
 
 .btn {
-    background: var(--background, var(--white-color));
-    color: var(--color, var(--blue-001));
+    background: var(--background, var(--yellow-002));
+    color: var(--color, var(--white-color));
+    font-family: var(--font-berkshire-swash);
     font-weight: 700;
     padding: 10px 25px;
-    border: 2px solid var(--border-color, var(--white-color));
+    border: 2px solid var(--border-color, var(--yellow-002));
     border-radius: var(--radius-6);
 }
 
 .btn-secondary:is(:hover, :focus) {
     --background: transparent;
     --color: var(--white-color);
+    border: 2px solid var(--white-color);
 }
 
 .btn-primary:is(:hover, :focus){
@@ -115,79 +124,94 @@ ion-icon { display: block; }
 
 .header {
     background: var(--blue-001);
+    padding: 1.5rem 0;
     transition: 0.25s cubic-bezier(0.33, 0.85, 0.56, 1.02);
-}
-
-.header.active {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .header.active {
     height: 425px;
     transition-duration: 0.35s;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5rem;
-}
-
-
-.logo {
+    padding: 0 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.logo-svg {
+  }
+  
+  .logo-svg {
     width: 50px;
-}
-
-.logo-text {
+  }
+  
+  .logo-text {
     color: var(--white-color);
     font-size: var(--fs-logo);
+    font-family: var(--font-berkshire-swash);
     font-weight: 600;
     margin: 0;
-}
-
-
-.navbar {
+  }
+  
+  .navbar {
     padding: 10px 10px;
     transition: var(--transition-1);
-}
-
-li a {
-    color: var(--white-color);
-
-}
-
-.navbar-list {
-    margin-bottom: 15px; 
-}
-
-.navbar-link {
+  }
+  
+  .navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 0;
+    font-family: var(--font-kalnia);
+  }
+  
+  .navbar-link {
     color: var(--white-color);
     font-size: var(--fs-nav);
     font-weight: 500px;
     padding-block: 10px 0;
     border-bottom: 2px solid transparent;
     width: max-content;
-}
+  }
+  
+  .navbar-link:is(:hover, :focus) {
+    border-color: var(--white-color);
+  }
 
-.navbar-list{
+  .nav-toggle-btn {
+    color: var(--yellow-002);
+  }
+  
+  .nav-toggle-btn .open {
+    display: none;
+  }
+  
+  .nav-toggle-btn .close {
+    display: none;
+  }
+  
+  .nav-toggle-btn .open {
+    display: block;
+    font-size: 30px;
+  }
+  
+  .header-actions {
     display: flex;
-    align-items:center;
-    gap: 50px;
-}
-
-
-.nav-toggle-btn .open{
-    display:none;
-}
-.nav-toggle-btn .close{
-    display:none;
-}
-
-.navbar-link:is(:hover, :focus) { border-color: var(--white-color); }
-
-
+    align-items: center;
+    gap: 20px;
+  }
+  
 
 
 
@@ -199,19 +223,33 @@ li a {
 
 /* --> ***************** <-- */
 
-@media(max-width:1070px)
-{
+
+
+@media (max-width: 1070px) {
+
+    
     .navbar {
         display: none;
     }
-    .btn{
-        display:none
+  
+    .header-actions {
+        display: none;
     }
-    .nav-toggle-btn .open{
+  
+    .nav-toggle-btn .open {
         display: block;
         font-size: 30px;
     }
-}
+  }
+  
+  @media (min-width: 1070px) {
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+  }
+
 
 
 

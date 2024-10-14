@@ -94,7 +94,7 @@ ion-icon { display: block; }
 
 
 
-.btn {
+.btn-secondary {
     background: var(--background, var(--yellow-002));
     color: var(--color, var(--white-color));
     font-family: var(--font-berkshire-swash);
@@ -102,9 +102,10 @@ ion-icon { display: block; }
     padding: 10px 25px;
     border: 2px solid var(--border-color, var(--yellow-002));
     border-radius: var(--radius-6);
+    transition:  0.5s ease-in-out;
 }
 
-.btn-secondary:is(:hover, :focus) {
+.btn-secondary:hover {
     --background: transparent;
     --color: var(--white-color);
     border: 2px solid var(--white-color);

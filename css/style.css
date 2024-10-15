@@ -26,6 +26,7 @@
     --font-lexend: 'Lexend', sans-serif;
     --font-berkshire-swash: 'Berkshire Swash', cursive, sans-serif;;
     --font-kalnia: 'Kalnia', sans-serif;
+
     /* Sizes */
 
     --fs-logo: 2.4rem;
@@ -107,12 +108,29 @@ ion-icon { display: block; }
 .btn-secondary:is(:hover, :focus) {
     --background: transparent;
     --color: var(--white-color);
-    border: 2px solid var(--white-color);
+    border: 2px solid var(--white-color); 
 }
 
 .btn-primary:is(:hover, :focus){
-    background-color: var(--btn-hover-color);
-    color: var(--white-color);
+    background-color: var(--white-color);
+    color: var(--yellow-002);
+}
+
+.btn-outline {
+  color: var(--darkish-003);
+  border: 2px solid var(--border-color, var(--darkish-003));
+  font-family: var(--font-berkshire-swash);
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: var(--radius-6);
+  background-color: var(--white-color);
+
+}
+
+.btn-duo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 
@@ -211,7 +229,70 @@ ion-icon { display: block; }
     align-items: center;
     gap: 20px;
   }
-  
+
+/*-----------------------------------*\
+            #LANDING PAGE
+\*-----------------------------------*/
+
+.sec_hero {
+  background-color: var(--white-color);
+  padding-block: var(--section-padding);
+}
+
+.hero-content {
+  margin-bottom: 50px;
+}
+
+.hero-subtitle {
+  color: var(--yellow-002);
+  font-size: 5.5rem;
+  font-weight: 600;
+  font-family: var(--font-island-moments);
+  margin-bottom: 5px;
+}
+
+.hero-title {
+  color: var(--darkish-003);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  color: var(--grayish-004);
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+
+/*-----------------------------------*\
+              #GALLERY
+\*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+              #POPULAR
+\*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+              #ABOUT ME
+\*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+              #ABOUT ME
+\*-----------------------------------*/
+
+
 
 
 

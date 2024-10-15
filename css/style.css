@@ -320,7 +320,31 @@ ion-icon { display: block; }
 
 /* --> ***************** <-- */
 
+@media (min-width: 768px) {
 
+  .sec_hero .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-content {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .hero-figure {
+    flex: 1;
+  }
+
+  .btn-duo {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+}
 
 
 @media (max-width: 1070px) {

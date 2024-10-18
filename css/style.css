@@ -147,7 +147,7 @@ ion-icon { display: block; }
     position: relative;
     z-index: 1000;
   }
-  
+   
   .header.active {
     height: 425px;
     transition-duration: 0.35s;
@@ -289,6 +289,20 @@ ion-icon { display: block; }
 /*-----------------------------------*\
               #GALLERY
 \*-----------------------------------*/
+
+.sec-gallery .container-gallery-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery-container-main img {
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  padding: 35px 45px;
+}
 
 
 

@@ -1,0 +1,5 @@
+Plan Feature [ Gallery Images ] 
+
+- Add a Lightbox Featur
+* Implement Lightbox: Allow users to click on an image to view it in a larger format.
+* JavaScript Integration: To handle the lightbox functionality.

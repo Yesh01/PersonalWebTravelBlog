@@ -289,25 +289,84 @@ ion-icon { display: block; }
 /*-----------------------------------*\
               #GALLERY
 \*-----------------------------------*/
+/*-----------------------------------*\
+  #GALLERY
+\*-----------------------------------*/
 
 .sec_gallery {
   padding-block: var(--section-padding);
 }
 
-.sec_gallery .container {
+.container-gallery {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.gallery-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 60px; 
 }
 
+.gallery-heading .section-subtitle {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
 
+.gallery-heading .section-title {
+  font-size: 3rem;
+  color: var(--heading-color);
+  font-weight: bold;
+}
+
+/* Tnx for Satisfaction damn docus*/
+
+.gallery-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-6);
+  overflow: hidden;
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+}
+
+.gallery-item.small {
+  grid-column: span 1;
+}
+
+.gallery-item .img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item .item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: var(--white-color);
+}
+
+.gallery-item .item-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.gallery-item .item-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 /*-----------------------------------*\
               #POPULAR

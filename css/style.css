@@ -300,12 +300,13 @@ ion-icon { display: block; }
   padding: 0 20px;
 }
 
-.gallery-list {
+.gallery-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
 }
+
 
 
 /*-----------------------------------*\

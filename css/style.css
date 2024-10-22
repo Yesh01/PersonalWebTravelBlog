@@ -294,69 +294,18 @@ ion-icon { display: block; }
   padding-block: var(--section-padding);
 }
 
-.sec_gallery .section-subtitle {
-  color: var(--yellow-002);
-  font-size: 2.5rem;
-  font-family: var(--font-island-moments);
-  text-align: center;
-  margin-bottom: 10px;
+.sec_gallery .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.sec_gallery .section-title {
-  color: var(--darkish-003);
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-
-.gallery-item {
+.gallery-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
-.gallery-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--darkish-003);
-}
-
-.card-banner {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.card-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.card-subtitle {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--yellow-002);
-  margin-bottom: 10px;
-}
-
-.card-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--darkish-003);
-  margin-bottom: 20px;
-}
-
 
 
 /*-----------------------------------*\

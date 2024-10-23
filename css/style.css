@@ -17,6 +17,7 @@
     --darkish-003: #564E3A;
     --grayish-004: #585656;
     --silver-chalice: #acacac;
+    --scroll-bar: #dde4ef;
 
 
     
@@ -90,6 +91,15 @@ button,
 ion-icon { display: block; }
 
 :focus-visible { outline-offset: 5px; } /* --> Accessibility for Keyboards Addicts < -- */
+
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background: hsl(0, 0%, 95%); }
+
+::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%); }
+
+::-webkit-scrollbar-thumb:hover { background: var(--scroll-bar) }
 
 
 

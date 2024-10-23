@@ -108,7 +108,11 @@ ion-icon { display: block; }
            #REUSABILITY
 \*-----------------------------------*/
 
-.container { padding-inline: 15px; }
+.container { 
+  padding-inline: 15px; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .section { padding-block: 40px }
 
@@ -160,9 +164,17 @@ ion-icon { display: block; }
   font-family: var(--font-island-moments);
   color: var(--yellow-002);
   font-size: 3rem;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.section-title { font-family: var(--font-berkshire-swash); }
+.section-title {
+  font-family: var(--font-berkshire-swash);
+  color: var(--darkish-003);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
 .img-cover {
   width: 100%;
@@ -332,6 +344,9 @@ ion-icon { display: block; }
               #GALLERY        
 \*-----------------------------------*/
 
+.sec_gallery {
+  padding-block: var(--section-padding);
+}
 
 .sec_gallery .section-subtitle {
   text-align: center;
@@ -349,10 +364,14 @@ ion-icon { display: block; }
   gap: 30px;
 }
 
-.gallery-banner {
+.gallery-item {
   position: relative;
   border-radius: var(--radius-6);
   overflow: hidden;
+}
+
+.gallery-banner-card {
+  position: relative;
 }
 
 .gallery-banner-card::after {
@@ -362,11 +381,15 @@ ion-icon { display: block; }
   background: linear-gradient(hsla(222, 46%, 17%, 0), hsla(222, 46%, 17%, 0.7));
 }
 
-.gallery-banner img { transition: var(--transition-2); }
+.gallery-banner img {
+  transition: var(--transition-2);
+}
 
-.gallery-banner:is(:hover, :focus) img { transform: scale(1.1); }
+.gallery-banner-card:is(:hover, :focus) img {
+  transform: scale(1.1);
+}
 
-.gallery-banner .banner-content {
+.banner-content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -375,17 +398,16 @@ ion-icon { display: block; }
   z-index: 1;
 }
 
-.gallery-banner .banner-subtitle {
+.banner-subtitle {
   color: var(--yellow-002);
   font-family: var(--font-island-moments);
-  font-size: 1.1;
+  font-size: 1.8rem;
 }
 
-.gallery-banner .banner-title {
-  color: var(--darkish-003);
+.banner-title {
+  color: var(--white-color);
   font-family: var(--font-berkshire-swash);
 }
-
 
 
 /*-----------------------------------*\
@@ -418,6 +440,7 @@ ion-icon { display: block; }
 
 /* --> ***************** <-- */
 
+
 @media (min-width: 768px) {
 
   .sec_hero .container {
@@ -442,9 +465,9 @@ ion-icon { display: block; }
     align-items: center;
   }
 
-  .gallery-list > li { width: calc(33.33% - 20px); }
-
-  .gallery-list .gallery-item { width: calc(50% - 20px); }
+  .gallery-list > li {
+    width: calc(33.33% - 20px);
+  }
 
   
 }

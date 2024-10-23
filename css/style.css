@@ -16,6 +16,8 @@
     --yellow-002: #E4C312;
     --darkish-003: #564E3A;
     --grayish-004: #585656;
+    --silver-chalice: #acacac;
+
 
     
     /* Fonts */
@@ -45,6 +47,7 @@
 
     --transition-1: 0.3s ease;
 
+
 }
 
 
@@ -69,6 +72,8 @@ html {
     scroll-behavior: smooth;
 }
 
+img { height: auto; }
+
 button { cursor: pointer; }
 a  { text-decoration: none; }
 li { list-style: none; }
@@ -80,6 +85,7 @@ button {
 }
 
 a,
+img,
 button,
 ion-icon { display: block; }
 
@@ -92,7 +98,9 @@ ion-icon { display: block; }
            #REUSABILITY
 \*-----------------------------------*/
 
+.container { padding-inline: 15px; }
 
+.section { padding-block: 40px }
 
 .btn {
     background: var(--background, var(--yellow-002));
@@ -132,6 +140,30 @@ ion-icon { display: block; }
     flex-wrap: wrap;
     gap: 15px;
 }
+
+.h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  font-family: var(--font-island-moments);
+  color: var(--yellow-002);
+  font-size: 3rem;
+}
+
+.section-title { font-family: var(--font-berkshire-swash); }
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-banner { background: var(--silver-chalice); }
+
+
+
 
 
 
@@ -287,18 +319,61 @@ ion-icon { display: block; }
 
 
 /*-----------------------------------*\
-              #GALLERY
+              #GALLERY        
 \*-----------------------------------*/
 
 
-.sec_gallery {
-  padding-block: var(--section-padding);
+.sec_gallery .section-subtitle {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
+.sec_gallery .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-banner {
+  position: relative;
+  border-radius: var(--radius-6);
+  overflow: hidden;
+}
+
+.gallery-banner-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(hsla(222, 46%, 17%, 0), hsla(222, 46%, 17%, 0.7));
+}
+
+.gallery-banner img { transition: var(--transition-2); }
+
+.gallery-banner:is(:hover, :focus) img { transform: scale(1.1); }
+
+.gallery-banner .banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  z-index: 1;
+}
+
+.gallery-banner .banner-subtitle {
+  color: var(--yellow-002);
+  font-family: var(--font-island-moments);
+  font-size: 1.1;
+}
+
+.gallery-banner .banner-title {
+  color: var(--darkish-003);
+  font-family: var(--font-berkshire-swash);
 }
 
 
@@ -356,6 +431,10 @@ ion-icon { display: block; }
     justify-content: flex-start;
     align-items: center;
   }
+
+  .gallery-list > li { width: calc(33.33% - 20px); }
+
+  .gallery-list .gallery-item { width: calc(50% - 20px); }
 
   
 }

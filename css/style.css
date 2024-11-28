@@ -54,6 +54,12 @@
 
 }
 
+.sample {
+  font-style: var(--font-island-moments);
+  color: var(--darkish-003);
+  font-size: 5rem;
+}
+
 
 /* --> Global Reset <-- */
 
@@ -186,9 +192,6 @@ ion-icon { display: block; }
 }
 
 .gallery-banner { background: var(--silver-chalice); }
-
-
-
 
 
 
